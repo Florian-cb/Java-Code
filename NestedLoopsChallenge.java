@@ -1,8 +1,6 @@
-/************************************************  * Florian Celibashi  * COP 2800 86397  * NestedLoopsChallenge  ************************************************/
-
 import java.util.Scanner;
 
-public class NestedLoopsChallenge {
+public class nestedLoopsChallenge {
    public static void main(String[] args) {
       Scanner scanner = new Scanner(System.in);
       System.out.print("Enter your grade (0-100): ");
@@ -29,5 +27,8 @@ public class NestedLoopsChallenge {
             System.out.println("Not passing. Please see your advisor for support services.");
             break;
       }
+
+      scanner.close();
+
    }
 }

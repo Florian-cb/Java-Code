@@ -1,5 +1,3 @@
-/************************************************  * Florian Celibashi  * COP 2800 86397  * Week 10 Code Exercise  ************************************************/
-
 public class Pizza {
     private String description;
     private double price;
@@ -13,7 +11,7 @@ public class Pizza {
     // Display method
     public void display() {
         System.out.println("Pizza Description: " + description);
-        System.out.println("Price: $" + price);
+        System.out.println("Price: $" + price + "\n");
     }
 
     public static void main(String[] args) {

@@ -1,17 +1,16 @@
-/************************************************  * Florian Celibashi  * COP 2800 86397  * W6 Code Exercise  ************************************************/
-
 import java.util.Scanner;
 import java.util.InputMismatchException; // Importing the InputMismatchException class
 
-public class week6ExerciseFl {
+public class avgTestGrade {
    public static void main(String[] args) {
+
       Scanner scanner = new Scanner(System.in);
-      
+
       System.out.print("Enter the number of tests: ");
       int numTests = scanner.nextInt();
-      
+
       int[] testScores = new int[numTests]; // Creating an array to hold the number of test scores
-      
+
       // Getting the test scores from the user
       for (int i = 0; i < numTests; i++) {
          System.out.print("Enter test score #" + (i + 1) + ": ");
@@ -23,13 +22,13 @@ public class week6ExerciseFl {
             i--; // Decrement i to repeat the current iteration
          }
       }
-      
+
       // Displaying the test scores
       System.out.println("Test scores entered:");
       for (int i = 0; i < numTests; i++) {
          System.out.println("Test score #" + (i + 1) + ": " + testScores[i]);
       }
-      
+
       // Finding the highest test score
       int highestScore = testScores[0];
       for (int i = 1; i < numTests; i++) {
@@ -37,10 +36,10 @@ public class week6ExerciseFl {
             highestScore = testScores[i];
          }
       }
-      
+
       // Displaying the highest test score
       System.out.println("Highest test score: " + highestScore);
-      
+
       // Finding the lowest test score
       int lowestScore = testScores[0];
       for (int i = 1; i < numTests; i++) {
@@ -48,10 +47,24 @@ public class week6ExerciseFl {
             lowestScore = testScores[i];
          }
       }
-      
+
       // Displaying the lowest test score
       System.out.println("Lowest test score: " + lowestScore);
-      
+
+      // Calculating the average test score
+      int sum = 0;
+      for (int i = 0; i < numTests; i++) {
+         sum += testScores[i];
+      }
+
+      // Finding the average test score
+      double averageScore = Math.floor((double) sum / numTests);
+
+      // Displaying the average test score
+      System.out.println("Average test score: " + averageScore);
+
       scanner.close();
+
    }
+
 }
